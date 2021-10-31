@@ -49,7 +49,7 @@ function Content() {
 					<Tbody>
 						{u.map(
 							(r) => (
-								<Tr>
+								<Tr key={r.key}>
 									<Td><img className='avatar-item' key={r.key} src={`data:image/svg+xml;base64,${new Identicon(r.key, { format: 'svg' }).toString()}`} alt={r.key} /></Td>
 									<Td><div className='center'><p>{r.messaged ? '✅' : '❌'}</p></div></Td>
 									<Td>{r.name}</Td>
